@@ -1,1 +1,12 @@
-*__pycache__
+# Ignore .git folders in all subfolders
+**/.git/
+
+# Ignore .github folders in all subfolders
+**/.github/
+
+# Ignore __pycache__ folders and environments in all subfolders
+**/__pycache__/
+**/env/
+
+# Ignore .gitignore files in all subfolders
+**/.gitignore
