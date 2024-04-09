@@ -1,0 +1,11 @@
+<h1>Function Plotter</h1>
+
+<form action="/plot_graph" method="post">
+    <label for="function">Enter a mathematical function:</label><br>
+    <input type="text" id="function" name="function">
+    <input type="submit" value="Plot">
+</form>
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
