@@ -1,7 +1,7 @@
 class TreeNode:
     def __init__(self, value=0, left=None, right=None):
         # node-object, with a value and the possibility for a left and right branch
-        self.value = value
+        self.val = value
         self.left = left
         self.right = right
         
@@ -44,12 +44,12 @@ def average_root(numbers: list) -> int:
         left_subtree_sum, left_subtree_count, _ = get_sum_and_count(node.left)
         right_subtree_sum, right_subtree_count, _ = get_sum_and_count(node.right)
         
-        subtree_sum = left_subtree_sum + right_subtree_sum + node.value if node.value is not None else 0
-        subtree_count = left_subtree_count + right_subtree_count + 1 if node.value is not None else 0
+        subtree_sum = left_subtree_sum + right_subtree_sum + node.val if node.val is not None else 0
+        subtree_count = left_subtree_count + right_subtree_count + 1 if node.val is not None else 0
         
-        tree_vals.append((subtree_sum, subtree_count, node.value))
+        tree_vals.append((subtree_sum, subtree_count, node.val))
 
-        return subtree_sum, subtree_count, node.value
+        return subtree_sum, subtree_count, node.val
     
     get_sum_and_count(tree)
     
@@ -65,7 +65,7 @@ def average_root(numbers: list) -> int:
 def print_tree(node, level=0):
     if node is not None:
         print_tree(node.right, level + 1)
-        print("   " * level + str(node.value))
+        print("   " * level + str(node.val))
         print_tree(node.left, level + 1)
 
 if __name__ == "__main__":
