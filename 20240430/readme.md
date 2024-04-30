@@ -1,0 +1,1 @@
+#enumerations in postgres sql
