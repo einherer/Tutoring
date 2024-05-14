@@ -74,7 +74,7 @@ def test_connect():
             response = cursor.fetchall()
             print(response)  
             
-            
+    #you an also name a cursor and handle it's result line-by-line, item-by-item
     with connection.cursor(name="give_me_a_name") as cursor:
             cursor.execute("select * from orders")
             
